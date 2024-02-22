@@ -6,6 +6,7 @@ const CircleWrapper = styled.div<CircleProps>`
     height: 500px;
     border-radius: 50%;
     background-color: ${(props) => props.bgColor};
+    border: 5px solid ${(props) => props.borderColor};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,14 +15,15 @@ const CircleWrapper = styled.div<CircleProps>`
 
 interface CircleProps {
     bgColor: string;
+    borderColor?: string;
 }
 
-export default function Circle({ bgColor }: CircleProps) {
+export default function Circle({ bgColor, borderColor }: CircleProps) {
     return (
-        <CircleWrapper bgColor={bgColor}>
-            <Square sqColor="yellow" />
+        <CircleWrapper bgColor={bgColor} borderColor={borderColor ?? 'black'}>
+            <Square sqColor="yellow" sqBorder="teal" />
             <Square sqColor="teal" />
-            <Square sqColor="aliceblue" />
+            <Square sqColor="aliceblue" sqBorder="yellow" />
         </CircleWrapper>
     );
 }

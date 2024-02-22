@@ -17,7 +17,7 @@ const MainWrapper = styled.main`
 function App() {
     return (
         <MainWrapper>
-            <Circle bgColor="red" />
+            <Circle bgColor="red" borderColor="green" />
             <Circle bgColor="blue" />
         </MainWrapper>
     );
