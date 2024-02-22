@@ -31,6 +31,7 @@ export const ProjectInner = styled.div`
 const HomeButtons = styled(Link)`
     color: var(--accent-200);
     padding: 1rem 2rem;
+    margin: 0.5rem;
     border: 2px solid var(--accent-200);
     border-radius: 10px;
     text-decoration: none;
@@ -50,6 +51,7 @@ export default function Home() {
             </ProjectTitle>
             <ProjectInner>
                 <HomeButtons to="/calculator">Calculator</HomeButtons>
+                <HomeButtons to="/todo">ToDo List</HomeButtons>
             </ProjectInner>
         </ProjectOuter>
     );
