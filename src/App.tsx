@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 // import css
 import './CSS/index.css';
+import Counter from './Counter';
 // import components
 
 const MainWrapper = styled.main`
@@ -14,7 +15,11 @@ const MainWrapper = styled.main`
 `;
 
 function App() {
-    return <MainWrapper>Counter</MainWrapper>;
+    return (
+        <MainWrapper>
+            <Counter />
+        </MainWrapper>
+    );
 }
 
 export default App;
