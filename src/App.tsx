@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 // import css
 import './CSS/index.css';
-import Counter from './Counter';
+import ToDo from './ToDo';
 // import components
 
 const MainWrapper = styled.main`
@@ -17,7 +17,7 @@ const MainWrapper = styled.main`
 function App() {
     return (
         <MainWrapper>
-            <Counter />
+            <ToDo />
         </MainWrapper>
     );
 }
