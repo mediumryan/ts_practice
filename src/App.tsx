@@ -11,7 +11,6 @@ const MainWrapper = styled.main`
     background-color: #eee;
     display: flex;
     justify-content: center;
-    align-items: center;
 `;
 
 function App() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 // import css
 import './CSS/index.css';
 // import components
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App />
+            <RecoilRoot>
+                <App />
+            </RecoilRoot>
         </BrowserRouter>
     </React.StrictMode>
 );
