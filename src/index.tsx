@@ -6,16 +6,22 @@ import { RecoilRoot } from 'recoil';
 import './CSS/index.css';
 // import components
 import App from './App';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
+const queryClient = new QueryClient();
+
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <RecoilRoot>
-                <App />
-            </RecoilRoot>
+            <QueryClientProvider client={queryClient}>
+                <RecoilRoot>
+                    <App />
+                </RecoilRoot>
+            </QueryClientProvider>
         </BrowserRouter>
     </React.StrictMode>
 );
